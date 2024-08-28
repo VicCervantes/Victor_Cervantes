@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Cambiado a un tono más suave */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff; /* Azul farmacéutico */
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #007bff; /* Azul farmacéutico */
+    font-size: 24px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* Verde farmacéutico */
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Verde oscuro al pasar el ratón */
+}
+
+.medicamento {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff; /* Cambiado a blanco */
+}

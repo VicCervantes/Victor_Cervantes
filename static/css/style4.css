@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Cambio a un tono más suave */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Azul farmacéutico */
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555555;
+    font-size: 16px;
+}
+
+a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #28a745; /* Verde farmacéutico */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #218838; /* Verde oscuro al pasar el ratón */
+}

@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Cambiado a un tono más suave */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Azul farmacéutico */
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Ajuste para tener en cuenta el padding y el border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: calc(100% - 22px); /* Ajuste para tener en cuenta el padding y el border */
+    display: block;
+    padding: 10px;
+    background-color: #28a745; /* Verde farmacéutico */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Espacio adicional entre el input y el botón */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Verde oscuro al pasar el ratón */
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff; /* Azul farmacéutico */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

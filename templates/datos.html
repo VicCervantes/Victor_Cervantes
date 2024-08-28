@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style1.css')}}">
+
+    <title>Datos</title>
+</head>
+<body>
+    <h1>Farmacia</h1>
+    
+    <form action="/guardar" method="post">
+        <h2>Farmacia el Padrino</h2>
+        <input type="text" name="nombre_farmacia" placeholder="Nombre"><br>
+        <input type="text" name="direccion_farmacia" placeholder="Dirección"><br>
+        <input type="text" name="telefono_farmacia" placeholder="Teléfono"><br>
+        <input type="text" name="ciudad_farmacia" placeholder="Ciudad"><br>
+        
+        <h2>Empleados</h2>
+        <label>Número de empleados:</label>
+        <input type="number" name="numero_empleados" min="0" value="0"><br>
+        <div id="empleados">
+        </div>
+        
+        <input type="submit" value="Guardar">
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.querySelector('input[name="numero_empleados"]').addEventListener('input', function() {
+                var numeroEmpleados = parseInt(this.value);
+                var empleadosDiv = document.getElementById('empleados');
+                empleadosDiv.innerHTML = '';
+                for (var i = 0; i < numeroEmpleados; i++) {
+                    var empleadoDiv = document.createElement('div');
+                    empleadoDiv.className = 'empleado';
+                    empleadoDiv.innerHTML = `<br>
+                        <input type="text" name="nombre_empleado${i}" placeholder="Nombre"><br>
+                        <input type="text" name="apellido_empleado${i}" placeholder="Apellido"><br>
+                        <input type="text" name="direccion_empleado${i}" placeholder="Dirección"><br>
+                        <input type="text" name="telefono_empleado${i}" placeholder="Numero telefonico"><br>
+                        <input type="text" name="num_empleado${i}" placeholder="Número"><br>
+                        <input type="text" name="clave_sucursal${i}" placeholder="Clave sucursal"><br>
+                        <select name="puesto${i}">
+                        <option value="normal">Empleado</option>
+                        <option value="encargado">Encargado</option>
+                        </select><br>
+                    `;
+                    empleadosDiv.appendChild(empleadoDiv);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

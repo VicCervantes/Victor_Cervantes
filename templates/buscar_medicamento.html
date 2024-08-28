@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style4.css')}}">
+
+    <title>Buscar Medicamento</title>
+</head>
+<body>
+    <h1>Buscar Medicamento</h1>
+    <form action="/buscar_medicamento" method="post">
+        <input type="text" name="termino_busqueda" placeholder="Buscar por nombre, presentación o precio"><br>
+        <input type="submit" value="Buscar"><br>
+        <a href="laboratorio.html">Regresar a datos de laboratorio y medicamentos</a>
+    </form>
+    
+</body>
+</html>

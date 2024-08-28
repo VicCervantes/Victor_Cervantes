@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style2.css')}}">
+
+    <title>Datos</title>
+</head>
+<body>
+    <h1>Datos</h1>
+    
+    <form action="/guardar1" method="post">
+        <h2>Datos del laboratorio</h2>
+        <input type="text" name="laboratorio" placeholder="Nombre"><br>
+        <input type="text" name="direccionL" placeholder="Dirección"><br>
+        <input type="text" name="telefono3" placeholder="Teléfono"><br>
+        
+        <h2>Medicamentos</h2>
+        <label>Nm. medicamentos:</label>
+        <input type="number" name="medicamentos" min="0" value="0"><br>
+        <div id="medicamentos">
+        </div>
+
+        <h2>Stock</h2>
+        <label>Id stock</label>
+        <input type="text" name="idstock">
+        <label>Medicamento</label>
+        <input type="text" name="nS">
+        <label>Presentacion</label>
+        <input type="text" name="pS">
+        
+        <input type="submit" value="Guardar">
+    </form>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.querySelector('input[name="medicamentos"]').addEventListener('input', function() {
+                var numeroMedicamentos = parseInt(this.value);
+                var medicamentosDiv = document.getElementById('medicamentos');
+                medicamentosDiv.innerHTML = '';
+                for (var i = 0; i < numeroMedicamentos; i++) {
+                    var medicamentoDiv = document.createElement('div');
+                    medicamentoDiv.className = 'medicamento';
+                    medicamentoDiv.innerHTML = `<br>
+                        <input type="text" name="cantidad${i}" placeholder="Cantidad"><br>
+                        <input type="text" name="nombre_medicamento_${i}" placeholder="Nombre del medicamento"><br>
+                        <input type="text" name="presentacion_medicamento_${i}" placeholder="Presentación del medicamento"><br>
+                        <input type="text" name="accion_terapeutica_medicamento_${i}" placeholder="Acción terapéutica del medicamento"><br>
+                        <input type="text" name="laboratorio${i}" placeholder="Laboratorio del medicamento"><br>
+                        <input type="text" name="precio${i}" placeholder="Precio del medicamento"><br>
+                    `;
+                    medicamentosDiv.appendChild(medicamentoDiv);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

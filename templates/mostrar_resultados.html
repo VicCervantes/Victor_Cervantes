@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style5.css')}}">
+
+    <title>Resultados Búsqueda</title>
+</head> 
+<body>
+    <h1>Resultados Búsqueda</h1>
+    
+    <ul>
+        {% for medicamento in resultados %}
+            <li>
+                <strong>Nm. Comercial:</strong> {{ medicamento.cantidad }} <br>
+                <strong>Nm. Comercial:</strong> {{ medicamento.nombre_comercial }} <br>
+                <strong>Presentación:</strong> {{ medicamento.presentacion }} <br>
+                <strong>Metodo medicamento:</strong> {{ medicamento.accion_terapeutica }} <br>
+                <strong>Laboratorio:</strong> {{ medicamento.laboratorio }} <br>
+                <strong>Precio:</strong> {{ medicamento.precio }} <br>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Ingresar otro dato</a><br>
+    <a href="/laboratorio">Ingresar otro laboratorio y medicamento</a><br>
+    <a href="/buscar_medicamento">Buscar medicamento</a><br>
+</body>
+</html>
